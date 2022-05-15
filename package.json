@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "dependencies": {
+    "css-what": "^6.1.0"
+  },
+  "devDependencies": {
+    "marked": "^4.0.15",
+    "marked-terminal": "^5.1.1"
+  }
+}
