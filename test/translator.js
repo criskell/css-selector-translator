@@ -1,5 +1,6 @@
 import CSSwhat from "css-what";
 import { marked } from "marked";
+import util from "util";
 import TerminalRenderer from "marked-terminal";
 
 import * as T from "../lib/translator.js";
@@ -31,5 +32,27 @@ Para traduzir um seletor complexo:
   4. Adicione traducao(A), iniciando com ` com ... ` 
   5. Adicione traducao(P), iniciando com ` estando ...`
 */
-//console.log(CSSwhat.parse(".x.b#a"));
-console.log(marked(T.translate("p#x.a.b[x][x=oi]")[0]));
+
+function group(label, fn) {
+  console.group(label);
+  fn();
+  console.groupEnd();
+}
+
+function log(data) {
+  console.log(
+    util.inspect(data, {
+      showHidden: false,
+      depth: null,
+      colors: true,
+    })
+  );
+}
+
+group("translator.translate", () => {
+  log(T.translate("b a > c ~ c"));
+});
+
+("Um elemento do tipo `c` que está logo após um elemento do tipo `c` que é filho direto (ou seja, está no primeiro nível) de um elemento do tipo `a` que é descendente de um elemento do tipo `b`.");
+
+("Um elemento do tipo `c`, logo após um elemento do tipo `c` que é filho direto (ou seja, está no primeiro nível) de um elemento do tipo `a`, descendente de um elemento do tipo `x`.");
