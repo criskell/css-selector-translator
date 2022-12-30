@@ -18,8 +18,8 @@ const tests = {
     ["Um elemento do tipo `span` que tem o identificador `foo-bar` e a classe `foo-bar`."],
   ],
   "seletores complexos: articular os combinadores": [
-    "* > p",
-    ["Começando do lado direito, temos:\nUm elemento do tipo `p`. Em relação aos seus ancestrais, deve ser encontrado como **filho direto** de...\nUm elemento de qualquer tipo."]
+    "* > p [x=5]",
+    ["Começando do lado direito, temos:\nUm elemento de qualquer tipo que tem um atributo `x` com o valor **exatamente igual** ao valor `5`. Este elemento deve ser encontrado como **descendente** de...\nUm elemento do tipo `p`. Este elemento deve ser encontrado como **filho direto** de...\nUm elemento de qualquer tipo."]
   ],
 };
 
