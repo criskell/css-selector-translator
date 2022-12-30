@@ -19,7 +19,7 @@ const tests = {
   ],
   "seletores complexos: articular os combinadores": [
     "* > p [x=5]",
-    ["Começando do lado direito, temos:\nUm elemento de qualquer tipo que tem um atributo `x` com o valor **exatamente igual** ao valor `5`. Este elemento deve ser encontrado como **descendente** de...\nUm elemento do tipo `p`. Este elemento deve ser encontrado como **filho direto** de...\nUm elemento de qualquer tipo."]
+    ["Um elemento de qualquer tipo que tem um atributo `x` com o valor **exatamente igual** ao valor `5`. É **descendente** de...\nUm elemento do tipo `p`. É **filho direto** de...\nUm elemento de qualquer tipo."]
   ],
 };
 

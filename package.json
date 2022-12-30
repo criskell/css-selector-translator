@@ -1,9 +1,11 @@
 {
   "dependencies": {
-    "css-what": "^6.1.0"
+    "css-what": "^6.1.0",
+    "lodash.debounce": "^4.0.8"
   },
   "devDependencies": {
-    "jest": "^29.3.1"
+    "jest": "^29.3.1",
+    "parcel": "^2.8.2"
   },
   "scripts": {
     "test": "jest"
