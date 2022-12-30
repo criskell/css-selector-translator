@@ -23,15 +23,13 @@ const tests = {
   ],
 };
 
-describe("translator", () => {
-  describe("translate()", () => {
-    for (const [testDescription, [selector, expected]] of Object.entries(tests)) {
-      test(testDescription, () => {
-        const translations = translate(selector);
-        const texts = translations.map(({ to }) => to);
+describe("translate()", () => {
+  for (const [testDescription, [selector, expected]] of Object.entries(tests)) {
+    test(testDescription, () => {
+      const translations = translate(selector);
+      const texts = translations.map(({ to }) => to);
 
-        expect(texts).toEqual(expected);
-      });
-    }
-  });
+      expect(texts).toEqual(expected);
+    });
+  }
 });

@@ -1,53 +1,51 @@
 const humanize = require("../lib/humanize");
 
-describe("humanize", () => {
-  describe("quoteCode()", () => {
-    it("deve colocar uma string entre backticks", () => {
-      const string = "hello";
+describe("quoteCode()", () => {
+  it("deve colocar uma string entre backticks", () => {
+    const string = "hello";
 
-      const result = humanize.quoteCode(string);
+    const result = humanize.quoteCode(string);
 
-      expect(result).toBe("`hello`");
-    });
+    expect(result).toBe("`hello`");
   });
-  
-  describe("capitalize()", () => {
-    it("deve alterar a primeira letra de uma string para maiúscula", () => {
-      const string = "hello";
+});
 
-      const result = humanize.capitalize(string);
+describe("capitalize()", () => {
+  it("deve alterar a primeira letra de uma string para maiúscula", () => {
+    const string = "hello";
 
-      expect(result).toBe(`Hello`);
-    });
+    const result = humanize.capitalize(string);
 
-    it("deve deixar intacto a caixa alta ou baixa de outras letras", () => {
-      const string = "hElLo";
-
-      const result = humanize.capitalize(string);
-
-      expect(result).toBe(`HElLo`);
-    });
+    expect(result).toBe(`Hello`);
   });
 
-  describe("translateArray()", () => {
-    it("deve retornar uma string vazia se o array de entrada está vazio", () => {
-      expect(humanize.translateArray([])).toBe("");
-    });
+  it("deve deixar intacto a caixa alta ou baixa de outras letras", () => {
+    const string = "hElLo";
 
-    it("deve retornar o primeiro elemento de um array se contiver apenas 1 elemento", () => {
-      expect(humanize.translateArray(["teste"])).toBe("teste");
-    });
+    const result = humanize.capitalize(string);
 
-    it("deve enumerar dois elementos de um array com o conectivo 'e'", () => {
-      expect(humanize.translateArray(["a", "b"])).toBe("a e b");
-    });
+    expect(result).toBe(`HElLo`);
+  });
+});
 
-    it("deve enumerar três elementos de um array com vírgula e o conectivo 'e'", () => {
-      expect(humanize.translateArray(["a", "b", "c"])).toBe("a, b e c");
-    });
+describe("translateArray()", () => {
+  it("deve retornar uma string vazia se o array de entrada está vazio", () => {
+    expect(humanize.translateArray([])).toBe("");
+  });
 
-    it("deve enumerar quatro elementos de um array", () => {
-      expect(humanize.translateArray(["a", "b", "c", "d"])).toBe("a, b, c e d");
-    });
+  it("deve retornar o primeiro elemento de um array se contiver apenas 1 elemento", () => {
+    expect(humanize.translateArray(["teste"])).toBe("teste");
+  });
+
+  it("deve enumerar dois elementos de um array com o conectivo 'e'", () => {
+    expect(humanize.translateArray(["a", "b"])).toBe("a e b");
+  });
+
+  it("deve enumerar três elementos de um array com vírgula e o conectivo 'e'", () => {
+    expect(humanize.translateArray(["a", "b", "c"])).toBe("a, b e c");
+  });
+
+  it("deve enumerar quatro elementos de um array", () => {
+    expect(humanize.translateArray(["a", "b", "c", "d"])).toBe("a, b, c e d");
   });
 });
