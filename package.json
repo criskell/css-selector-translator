@@ -13,6 +13,6 @@
     "test": "jest",
     "ui:start": "parcel start",
     "ui:build": "parcel build",
-    "deploy": "npm run ui:build && gh-pages -d ui"
+    "deploy": "npm run ui:build && gh-pages -d dist"
   }
 }
