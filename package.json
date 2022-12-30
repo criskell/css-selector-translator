@@ -1,7 +1,5 @@
 {
-  "type": "module",
   "dependencies": {
     "css-what": "^6.1.0"
-  },
-  "devDependencies": {}
+  }
 }
