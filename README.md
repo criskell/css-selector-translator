@@ -2,4 +2,4 @@
 
 Tradutor de seletores CSS para português brasileiro.
 
-[!Screenshot](screenshot.jpg)
+[!Screenshot](screenshot.png)
